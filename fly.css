@@ -1,0 +1,651 @@
+* {
+    font-family: "Kalam", cursive;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+html{
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+body{
+    background-color: #fff;
+}
+header{
+    width: 96%;
+    background-color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position:fixed;
+    top:1.5rem; left:50%;
+    transform: translateX(-50%);
+    border-radius: .5rem;
+    box-shadow: 0.3rem 0.2rem rgba(134, 134, 134, 0.3);
+    padding: .3rem 2rem;
+    z-index: 1000;
+    border: none;
+    outline: none;
+}
+.header h5 .span a{
+    color: hwb(180 7% 40%);
+}
+header h5 a{
+    color:#333;
+    font-size: 2rem;
+}
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0; padding:1.5rem 0;
+}
+header .navbar ul li a{
+    margin: 2rem;
+    color:#333;
+    font-size: 1.5rem;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color:#26d4d4;
+    cursor: pointer;
+    display: none;
+}
+header .navbar ul li a:hover{
+    color:hwb(180 7% 40%);
+    transition: .2s linear;
+}
+#active{
+    color:hwb(180 7% 40%);
+}
+
+
+
+/*///////////////// header media quarries//////*/
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding:1.3rem 1.6rem;
+    }
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top:-100rem; left:50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: #fff;
+        border-radius:.5rem;
+        box-shadow: 0.3rem 0.5rem rgba(0, 0, 0, .3);
+        z-index: 1000;
+        opacity: 0;
+
+     
+    }
+    header .navbar ul{
+        flex-flow: column;
+    
+    }
+    header .navbar ul li{
+        margin: 1rem 0rem;
+        width: 100%;
+        text-align: center;
+    }
+    header .navbar ul li a{
+        display: block;
+        font-size:1.6rem;
+    }
+
+}
+/*///////////////// End of header media quarries//////*/
+
+/*///////////////// begining of home page//////*/
+.home{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.home .video video{
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content{
+    margin: auto;
+    margin-top: 16rem;
+}
+.content h1{
+    font-size: 5.1vw;
+    color: #fff;
+    text-shadow: 0.3rem 0.5rem #000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  
+}
+.home .content p{
+    font-size: 1.5vw;
+    color: #fff;
+    text-shadow: 0.3rem 0.2rem #000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  
+}
+
+/*///////////////// END of home page//////*/
+
+/*///////////////// Home media quarries//////*/
+
+@media (max-width:991px){
+    .home{
+        flex-flow: column;
+        padding: 1.5rem;
+    }
+    .home .content{
+        text-align: center;
+    }
+    .home .content h1{
+        font-size: 5.5rem;
+    }
+    .home .content p{
+        font-size: 1.8rem;
+        padding:0;
+
+
+    }
+}
+
+@media (max-width:1000px){
+    .home .content h1{
+        font-size:5rem;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:500px){
+    .home .content h1{
+        font-size: 5rem;
+    }
+    .home .video video{
+        width:100%;
+    }
+
+}
+/*///////////////// End home of media quarries//////*/
+
+/*///////////////// begining of feature section//////*/
+.feature{
+    min-height: 100vh;
+    background-color: #f9f9f9;
+
+}
+.heading{
+    color:#333;
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 6rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    padding-top: 2rem;
+}
+.heading span{
+    color: #26d4d4;
+}
+.feature .card-container{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    width:100%;
+}
+.feature .card-container .card{
+    width: 30rem;
+    margin: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.2rem rgba(155, 155, 155, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+.feature .card-container .card img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.feature .card-container .card .content{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+
+}
+.feature .card-container .content .title{
+    color:rgb(30, 204, 204);
+    font-size: 3rem;
+}
+.feature .card-container .content p{
+    color:#333;
+    font-size: 1.5rem;
+}
+.feature .card-container .content .stars i{
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    color: gold;
+}
+.feature .card-container .content .btn{
+    font-size: 1.7rem;
+    margin-top:1.4rem;
+    height: 3.5rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    background-color: hwb(180 7% 40%);
+    color:#fff;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.feature .card-container .content .btn:hover{
+    background-color:transparent;
+    border: 0.2rem solid hwb(180 7% 40%);
+    color:hwb(180 7% 40%);
+}
+.feature .card-container .card .discount{
+    position: absolute;
+    top:1rem; left:1rem;
+    display: block;
+    height: 3.5rem;
+    width: 6rem;
+    background-color: #ff3300;
+    color:#fff;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*///////////////// End of feature section//////*/
+
+/*///////////////// begining of about section//////*/
+.about{
+    min-height: 100vh;
+    width: 100%;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+.about .row .image img{
+    height: 65vh;
+    width: 50vw;
+    margin:0;
+}
+.about .row .content{
+    margin: 0;
+    padding: 0;
+}
+.about .row .content h3{
+    font-size: 4rem;
+    color:hwb(180 7% 40%) ;
+}
+.about .row .content span{
+    color:hwb(180 7% 40%) ;
+}
+.about .row .content p{
+    font-size: 1.9rem;
+    color:#333 ;
+}
+.about .row .content .btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    height: 4rem;
+    width: 18rem;
+    margin-top: 3rem;
+    background-color:hwb(180 7% 40%) ;
+    color: #fff;
+    font-size: 2rem;
+}
+.about .row .content .btn1,
+.about .row .content .btn:hover{
+    background-color:transparent;
+    color:hwb(180 7% 40%) ;
+    border: .2rem solid hwb(180 7% 40%);
+    margin-right: 1.5rem;
+}
+
+/*///////////////// about media quarries//////*/
+@media (max-width:1000px){
+    .about .row{
+        flex-flow: column;
+
+    }
+    .about .row .image img{
+        width: 90vw;
+    }
+    .about .row .content{
+        text-align: center;
+    }
+    .about .row .content .btn1{
+        margin-right: 0;
+    }
+}
+
+/*/////////////////End of  about media quarries//////*/
+
+
+/*///////////////// begining of galleryy section//////*/
+.gallery{
+    min-height: 100vh;
+}
+.gallery .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+.gallery .box-container .box{
+    height: 20rem;
+    width:30rem;
+    margin: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery .box-container .box .icons{
+    position: absolute;
+    top:0; left:0;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.gallery .box-container .box .icons a{
+    color:#fff;
+    text-shadow: 0.1rem 0.3rem #000;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.gallery .box-container .box .icons a:hover{
+    color:rgb(54, 223, 223);
+    font-size: 2.5rem;
+}
+/*///////////////// End of gallery section//////*/
+
+
+/*///////////////// begining of review section//////*/
+.review{
+  min-height: 100vh;
+  background: url(images/reviw\ bg.jpeg),linear-gradient(hwb(180 7% 40%),hwb(180 7% 40%)) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+.review .heading{
+    color: #fff;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    text-align: center;
+}
+.review .heading span{
+    color: gold;
+}
+.review .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.review .box-container .box{
+    width: 35rem;
+    margin: 4rem 2rem;
+   padding-bottom:2rem;
+   text-align: center;
+   box-shadow: 0.2rem 0.2rem #000;
+   background-color: #fff;
+}
+.review .box-container .box .image{
+    margin-top: -5rem;
+}
+.review .box-container .box .image img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.5rem solid gold;
+
+}
+.review .box-container .content{
+    margin: 0;
+}
+
+.review .box-container .box .content h3{
+    font-size: 2rem;
+    color:hwb(180 7% 40%) ;
+    padding-top: 0.5rem;
+
+}
+.review .box-container .box .content p{
+    font-size: 1.4rem;
+    color:#333 ;
+    padding: .5rem  1.5rem;
+
+}
+.review .box-container .box .content .stars{
+    font-size: 1.5rem;
+    color: gold;
+    padding:1rem .1rem;
+
+}
+/*///////////////// ending of review section//////*/
+
+/*///////////////// begining of contact section//////*/
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact .row .contact-info .box{
+    margin: 4rem 2rem;
+}
+.contact .row .contact-info .box h3{
+    font-size: 2rem;
+    color: #333;
+}
+.contact .row .contact-info .box h3 i{
+    color: hwb(180 7% 40%);
+}
+.contact .row .contact-info .box p{
+    padding-left: 3rem;
+    font-size: 1.7rem;
+    color: #aaa;
+}
+
+.contact .row .contact-form-container{
+    width: 50%;
+}
+.contact .row .contact-form-container h3{
+   font-size: 3rem;
+   padding-top: 4rem;
+   color: hwb(180 7% 40%);
+}
+.contact .row .contact-form-container  form input, textarea{
+    outline: none;
+    border: .2rem solid hwb(180 7% 40%);
+    height: 4rem;
+    background-color: #fff;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    width: 49%;
+
+}
+.contact .row .contact-form-container  form textarea{
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    height: 20%;
+}
+.contact .row .contact-form-container  form #submit{
+    color:hwb(180 7% 40%);
+    border:.2rem solid hwb(180 7% 40%);
+    cursor: pointer;
+    width: 20rem;
+    transition: .2s;
+}
+.contact .row .contact-form-container  form #submit:hover{
+    background-color:hwb(180 7% 40%);
+    color: #fff;
+}
+.contact .row{
+    margin-bottom: 3rem;
+}
+
+/*///////////////// contact section- media quarries//////*/
+@media (max-width:1000px){
+    .contact .row{
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .contact .row .contact-form-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+}
+@media (max-width:500px){
+    .contact .row .contact-form-container input{
+        margin:1rem 0rem;
+        width: 100%;
+    }
+    .contact .row .contact-form-container  form input #submit{
+        width: 100%;
+    }
+}
+
+/*/////////////////End of  about media quarries//////*/
+
+/*///////////////// ending of contact section//////*/
+
+
+/*///////////////// begining of newsletter section//////*/
+.Newsletter{
+    padding:2rem;
+    background-image: url(images/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+.Newsletter h1{
+    font-size: 4rem;
+    color:#fff;
+}
+.Newsletter p{
+    font-size: 2rem;
+    color:#eee;
+
+}
+.Newsletter form {
+    margin: 1rem;
+}
+.Newsletter form input{
+    height:5rem;
+    outline: none;
+    border: none;
+}
+.Newsletter form input[type="email"]{
+    width: 40rem;
+    padding: 0 2rem;
+    color:#fff;
+    background-color: rgba(255, 255, 255, .2);
+}
+.Newsletter form input[type="email"] ::placeholder{
+    color:#ccc;
+}
+
+.Newsletter form input[type="submit"]{
+    width: 20rem;
+    color: #fff;
+    background-color:hwb(180 7% 40%) ;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.Newsletter form input[type="submit"]:hover{
+    border: .2rem solid #fff;
+    background-color:transparent;
+
+}
+
+@media (max-width:1000px){
+    .Newsletter form input[type="email"]{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #222;
+}
+.footer .credit{
+    font-size: 2rem;
+    color:#eee;
+}
+.footer .icons a{
+    font-size: 2rem;
+    margin: .5rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border-radius: 50%;
+    color:#fff;
+    border: .2rem solid #fff;
+
+}
+.footer .icons a:hover{
+    background-color: hwb(180 7% 40%);
+}
+
+@media (max-width:700px){
+    .footer{
+        flex-flow: column;
+    }
+    .footer h1{
+        padding-bottom: 2rem;
+    }
+}
